@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Aprendiendo counters</title>
+        <style>
+            body{
+                counter-reset: section;
+            }
+            h2 {
+                counter-reset: subsection;
+            }
+
+            h2::before {
+            counter-increment: section;
+            content: "Section " counter(section) ". ";
+            }
+
+            h3::before {
+            counter-increment: subsection;
+            content: counter(section) "." counter(subsection) " ";
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Usando counters</h1>
+        <h2>Primero</h2>
+        <h3>Primero punto uno</h3>
+        <h3>Primero punto dos</h3>
+        <h3>Primero punto tres</h3>
+
+        <h2>Segundo</h2>
+        <h3>Segundo punto uno</h3>
+        <h3>Segundo punto dos</h3>
+        
+        <h2>Tercero</h2>
+        <h3>Tercero punto uno</h3>
+        <h3>Tercero punto dos</h3>
+        <h3>Tercero punto Tres</h3>
+        <h3>Tercero punto Cuatro</h3>
+    </body>
+</html>
